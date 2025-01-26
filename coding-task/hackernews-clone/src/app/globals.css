@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define theme variables for light and dark modes */
+:root {
+  --background: #ffffff; /* Light Mode Background */
+  --foreground: #171717; /* Light Mode Text */
+  --link-color: #1e40af; /* Default link color */
+  --link-hover: #2563eb; /* Hover color for links */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a; /* Dark Mode Background */
+    --foreground: #ededed; /* Dark Mode Text */
+    --link-color: #93c5fd; /* Dark Mode Link Color */
+    --link-hover: #60a5fa; /* Dark Mode Hover Color */
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for theme changes */
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+button {
+  background-color: var(--link-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--link-hover);
+}
+
+button:disabled {
+  background-color: #d1d5db; /* Disabled button color */
+  cursor: not-allowed;
+}
+
